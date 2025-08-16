@@ -1,5 +1,6 @@
 """
-Copyright 2018 - MathTix, LLC - All rights reserved.
+Copyright(c) 2025-present, MathTix, LLC.
+Distributed under the MIT License (http://opensource.org/licenses/MIT)
 """
 
 import logging
@@ -22,9 +23,9 @@ class Publisher(object):
     """
     The Publisher class provides a thread safe mechanism for subclasses to register events
     which the publisher can deliver to subscribers and an interface that clients can use to
-    subscribe for those published events. In a multi-threaded environment the targets can be
+    subscribe for those published events. In a multithreaded environment the targets can be
     invoked directly when there is no risk of the target calling back into the source of the
-    event. If the commmunication is two way, all objects should have both a publisher for
+    event. If the communication is two-way, all objects should have both a publisher for
     sending events and a dispatcher for receiving events.
     """
 

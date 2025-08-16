@@ -1,5 +1,6 @@
 """
-Copyright 2018 - MathTix, LLC - All rights reserved.
+Copyright(c) 2025-present, MathTix, LLC.
+Distributed under the MIT License (http://opensource.org/licenses/MIT)
 """
 
 import logging.config

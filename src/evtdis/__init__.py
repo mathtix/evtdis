@@ -1,3 +1,7 @@
+"""
+Copyright(c) 2025-present, MathTix, LLC.
+Distributed under the MIT License (http://opensource.org/licenses/MIT)
+"""
 name = "evtdis"
 
 __all__ = [
