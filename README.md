@@ -39,7 +39,7 @@ in the Python standard library.
 ### Isolated Build Environment
 ```
 hatch env create
-hatch shell[README.md](README.md)
+hatch shell
 ```
 
 ### Commands
