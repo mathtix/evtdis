@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "evtdis"
+dynamic = ["version"]
+description = "Thread safe event system"
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+authors = [
+  { name = "Doug Service", email = "doug@mathtix.com" },
+]
+keywords = ["events", "thread-safe", "dispatcher", "pubsub"]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Utilities",
+]
+
+dependencies = []  # оставить пустым, если пакет не требует внешних библиотек
+
+[project.urls]
+Documentation = "https://github.com/mathtix/evtdis#readme"
+Issues        = "https://github.com/mathtix/evtdis/issues"
+Source        = "https://github.com/mathtix/evtdis"
+
+[tool.hatch.version]
+path = "src/evtdis/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/evtdis"]
+
+# --- Дополнительные окружения ---
+
+[tool.hatch.envs.dev]
+dependencies = [
+  "pytest",
+  "coverage",
+  "mypy>=1.0.0",
+]
+
+[tool.hatch.envs.dev.scripts]
+test = "pytest --maxfail=1 --disable-warnings -q"
+lint = "mypy --install-types --non-interactive src/evtdis/tests"
+cov  = "coverage run -m pytest && coverage report"
+
+[tool.coverage.run]
+source_pkgs = ["evtdis", "tests"]
+branch = true
+parallel = true
+omit = ["src/evtdis/__about__.py"]
+
+[tool.coverage.paths]
+evtdis = ["src/evtdis", "*/evtdis/src/evtdis"]
+tests  = ["tests", "*/evtdis/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
