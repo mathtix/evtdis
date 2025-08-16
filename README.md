@@ -36,16 +36,23 @@ in the Python standard library.
  * pipx
  * hatch
 
-### Isolated Build Environment
+### Hatch
+``` bash
+pipx install hatch
 ```
+
+### Isolated Build Environment
+``` bash
 hatch env create
 hatch shell
 ```
 
 ### Commands
-```
+``` bash
 hatch build
 hatch run dev:test
 hatch run dev:lint
 hatch run dev:cov
 ```
+
+<!-- pipx run twine upload --repository testpypi dist/* -->
