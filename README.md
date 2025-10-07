@@ -57,4 +57,35 @@ hatch run dev:lint
 hatch run dev:cov
 ```
 
-<!-- pipx run twine upload --repository testpypi dist/* -->
+## Publish
+``` bash
+ pipx run twine upload --repository testpypi dist/* 
+```
+
+### PYPI RC File
+The format of PYPI "run commands" (rc) file (~/.pypirc) is:
+```
+[distutils]
+index-servers =
+    pypi
+    testpypi
+
+[pypi]
+repository = https://upload.pypi.org/legacy/
+username = __token__
+password = pypi-<TOKEN>
+
+[testpypi]
+repository = https://test.pypi.org/legacy/
+username = __token__
+password = pypi-<TOKEN>
+```
+Replace `pypi-<TOKEN>` with a token generated in the Account Settings section of the respective pipy site.
+
+<!--
+```bash
+ python -m twine check dist/*
+ python -m twine upload --repository testpypi dist/*
+```
+-->
+
