@@ -32,22 +32,24 @@ packages which make use of the evtdis package.
 The evtdis package does not require dependencies beyond the packages contained
 in the Python standard library.
 
-#### Build
- * pipx
- * hatch
-
-### Hatch
+## Build
+### Tool Dependencies
+#### pipx
+``` bash
+ sudo apt update
+ sudo apt install pipx
+```
+#### Hatch
 ``` bash
 pipx install hatch
 ```
-
-### Isolated Build Environment
+### Build Command Sequence
+First create a hatch environment.
 ``` bash
 hatch env create
 hatch shell
 ```
-
-### Commands
+Run the build, test, lint and coverage.
 ``` bash
 hatch build
 hatch run dev:test
