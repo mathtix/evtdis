@@ -40,6 +40,11 @@ packages = ["src/evtdis"]
 
 # --- Дополнительные окружения ---
 
+# Добавь параметр PIP_INDEX_URL, чтобы pip в первую очередь обращался к test.pypi.org.
+[tool.hatch.envs.dev.env-vars]
+PIP_INDEX_URL = "https://test.pypi.org/simple"
+PIP_EXTRA_INDEX_URL = "https://pypi.org/simple"
+
 [tool.hatch.envs.dev]
 dependencies = [
   "pytest",
