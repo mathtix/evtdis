@@ -12,6 +12,6 @@ __all__ = [
 ]
 
 
-from .test_dispatcher import TestDispatcher
-from .test_event import TestEvent
-from .test_publisher import TestPublisher
+from tests.test_dispatcher import TestDispatcher
+from tests.test_event import TestEvent
+from tests.test_publisher import TestPublisher
