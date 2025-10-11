@@ -58,8 +58,9 @@ hatch run dev:cov
 ```
 
 ## Publish
+<!-- pipx run twine upload --repository testpypi dist/* -->
 ``` bash
- pipx run twine upload --repository testpypi dist/* 
+ hatch publish -r [test/main]
 ```
 
 ### PYPI RC File
