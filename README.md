@@ -23,7 +23,7 @@ are published.
 ### Dispatcher
 The dispatcher class derives from the Python Thread class and acts as a
 thread-safe intermediary between publishers and subscribers.
-When a dispatcher receives an event from from a publisher on the publisher's
+When a dispatcher receives an event from a publisher on the publisher's
 thread of execution, the event goes into a thread-safe queue. The event is
 then dispatched to the subclass event processing function on the dispatcher's
 thread of execution.
