@@ -1,4 +1,9 @@
 # Thread Safe Event Dispatcher for Python
+[![Python 3.13](https://img.shields.io/badge/Python-3.13-blue?logo=python)]()
+[![Hatch project](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch)
+[![Platforms](https://img.shields.io/badge/Windows%20%7C%20Linux-supported-green.svg)]()
+[![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
+
 The evtdis Python package provides a thread safe mechanism for communicating
 between python threads running in parallel. The package contains three primary
 classes.
